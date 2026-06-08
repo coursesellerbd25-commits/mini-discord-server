@@ -6,7 +6,7 @@ import http from "http";
 import cors from "cors";
 import { Server } from "socket.io";
 import jwt from "jsonwebtoken";
-import { pool } from "./db";
+import { pool } from "./db.ts";
 
 const userMessageCounts = new Map<
     string,
