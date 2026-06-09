@@ -116,7 +116,7 @@ io.on("connection", (socket) => {
         }
 
         await pool.query(
-            `INSERT INTO messages (room, username, message) VALUES ($1, $2, $3)`,
+            "INSERT INTO messages (room, username, message) VALUES ($1, $2, $3)",
             [room, "Sultana", message,]
         );
         io.to(room).emit("receive-message", message);
